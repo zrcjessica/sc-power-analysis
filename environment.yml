@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+dependencies:
+  - r-base=3.6.2
+  - r-magrittr
+  - r-ggplot2
+  - r-optparse
+  - r-matrix
+  - r-seurat=3.2.0
+  - r-dplyr

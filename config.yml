@@ -1,0 +1,31 @@
+# name of sample(s) to use for NB parameter estimation
+sample: Rat_Amygdala_787A
+
+# path to directory to save output files
+out: out
+
+# simulation parameters
+params:
+  replicates: [1,3,5,7,10]
+  cells: 5000
+  effects: [1.25, 1.5, 1.75, 2]
+  alpha: 0.05
+  nGenes: 10000
+  pctDegs: 0.05
+  nSims: 15
+  test: wilcox
+  sample_variable: replicates
+
+# paths to (available) count matrices for all rats 
+data:
+  Rat_Amygdala_787A:
+    counts: data/snRNA/Rat_Amygdala_787A_all_seq/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_1_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_1_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_2_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_2_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_3_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_3_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_4_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_4_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+
