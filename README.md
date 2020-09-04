@@ -44,4 +44,43 @@ data:
 ```
 
 ### `sample`
-Include the name(s) of the sample you want to use as reference panel(s) for your power analyses. 
+Include the name(s) of the sample you want to use as reference panel(s) for your power analyses. Each power analysis takes one reference panel as input. If you choose to include a list of samples here, then the pipeline will return a plot of power curves for each sample. 
+
+Example:
+```YAML
+sample: SampleA
+```
+
+### `params`
+Input parameters to the simulation are described here. 
+- `replicates`: the number of replicates to include in the power analysis. Can be a list of integers or a single fixed value.
+- `cells`: the number of cells to include in the power analysis. Can be a list of integers or a single fixed value.
+- `effects`: a list of the effect sizes to include in the power analysis. 
+- `alpha`: the significance level to use for DGE testing.
+- `nGenes`: number of genes in each simulated count matrix.
+- `pctDegs`: percent of `nGenes` to be simulated as DEGs.
+- `nSims`: number of simulations for each power analysis calculation.
+- `test`: test to use for DGE testing; from list of options for the [`test.use`](https://www.rdocumentation.org/packages/Seurat/versions/3.1.4/topics/FindMarkers) argument in [Seurat's `FindMarkers()` function](https://satijalab.org/seurat/v3.0/de_vignette.html). `wilcox` is recommended.
+- `sample_variable`: one of `replicates` or `cells`. Specifies the value to be plotted on the x-axis of the power curve plot. The variable specified here must be defined by a list of values.
+
+Example:
+```YAML
+params:
+  replicates: [1,3,5,7,10]
+  cells: 5000
+  effects: [1.25, 1.5, 1.75, 2]
+  alpha: 0.05
+  nGenes: 10000
+  pctDegs: 0.05
+  nSims: 15
+  test: wilcox
+  sample_variable: replicates
+```
+
+### `out`
+Path to directory to save output files. 
+
+Example:
+```YAML
+out: out
+```
