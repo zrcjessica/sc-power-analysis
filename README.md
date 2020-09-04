@@ -4,14 +4,24 @@ A snakemake pipeline for scRNA-seq power analyses.
 # Introduction
 This pipeline estimates power to detect differentially expressed genes from scRNA-seq data at various numbers of samples/cells and effect sizes. It models mean and dispersion parameters on a Negative Binomial distribution from reference data and simulates representative UMI count data from these estimates. The user can [define various simulation parameters](out: out), such as the number of differentially expressed genes, effect sizes, number of samples, and number of cells. 
 
+![workflow](workflow.png)
+
 ## Parameter estimation on reference data
+Given a reference count matrix:
+$
+
+\begin{bmatrix}
+x_{1,1} & x_{1,2} & \cdots & x_{1,c} \\
+x_{2,1} & x_{2,2} & \cdots & x_{2,c} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+x_{n,1} & x_{n,2} & \cdots & x_{n,c}
+\end{bmatrix}
+$
 
 Given a reference count matrix, we fit the observed counts for each gene to a Negative Binomial distribution and estimates the mean and dispersion parameters. Our likelihood function includes a scaling factor for the mean equivalent to the sequencing depth of each cell. 
 
 ## Data simulation
 For each replicate, we generate a simulated count matrix reflecting a total number of genes and cells specified in the inputs. We simulate data for a control condition and a treatment condition. To begin, we randomly sample from the sequencing depths observed in the reference data to generate a vector of scaling factors equivalent in size to the number of cells specified for the simulation. For each gene, we randomly sample a mean and dispersion parameter (with replacement) from the estimated parameters in the previous step and randomly sample from the Negative Binomial distribution 
-
-![workflow](workflow.png)
 
 # Download
 Clone the repository to your desired destination.
