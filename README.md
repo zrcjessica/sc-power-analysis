@@ -43,7 +43,7 @@ data:
     counts: data/Sample C/outs/filtered_feature_bc_matrix/matrix.mtx.gz
 ```
 
-### `sample`
+### [`sample`](https://github.com/zrcjessica/sc-power-analysis/blob/a953e6c459756d63568e5cb07917c53db25c0fba/config.yml#L15)
 Include the name(s) of the sample you want to use as reference panel(s) for your power analyses. Each power analysis takes one reference panel as input. If you choose to include a list of samples here, then the pipeline will return a plot of power curves for each sample. 
 
 Example:
@@ -51,7 +51,7 @@ Example:
 sample: SampleA
 ```
 
-### `params`
+### [`params`](https://github.com/zrcjessica/sc-power-analysis/blob/a953e6c459756d63568e5cb07917c53db25c0fba/config.yml#L18)
 Input parameters to the simulation are described here. 
 - `replicates`: the number of replicates to include in the power analysis. Can be a list of integers or a single fixed value.
 - `cells`: the number of cells to include in the power analysis. Can be a list of integers or a single fixed value.
@@ -77,7 +77,7 @@ params:
   sample_variable: replicates
 ```
 
-### `out`
+### [`out`](https://github.com/zrcjessica/sc-power-analysis/blob/a953e6c459756d63568e5cb07917c53db25c0fba/config.yml#L30)
 Path to directory to save output files. 
 
 Example:
