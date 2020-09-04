@@ -38,9 +38,9 @@ data:
   SampleA:
     counts: data/SampleA/outs/filtered_feature_bc_matrix/matrix.mtx.gz
   Sample B:
-    counts: data/Sample B/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    counts: data/SampleB/outs/filtered_feature_bc_matrix/matrix.mtx.gz
   Sample C:
-    counts: data/Sample C/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+    counts: data/SampleC/outs/filtered_feature_bc_matrix/matrix.mtx.gz
 ```
 
 ### [`sample`](https://github.com/zrcjessica/sc-power-analysis/blob/a953e6c459756d63568e5cb07917c53db25c0fba/config.yml#L15)
