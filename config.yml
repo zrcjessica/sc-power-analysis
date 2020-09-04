@@ -1,8 +1,18 @@
-# name of sample(s) to use for NB parameter estimation
-sample: Rat_Amygdala_787A
+# names of all samples and paths to their count matrices
+data:
+  Rat_Amygdala_787A_all_seq:
+    counts: data/snRNA/Rat_Amygdala_787A_all_seq/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_1_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_1_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_2_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_2_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_3_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_3_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
+  Rat_Opioid_HS_4_premrna:
+    counts: data/snRNA/Rat_Opioid_HS_4_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
 
-# path to directory to save output files
-out: out
+# name of sample(s) to use for NB parameter estimation
+sample: Rat_Amygdala_787A_all_seq
 
 # simulation parameters
 params:
@@ -16,16 +26,5 @@ params:
   test: wilcox
   sample_variable: replicates
 
-# paths to (available) count matrices for all rats 
-data:
-  Rat_Amygdala_787A:
-    counts: data/snRNA/Rat_Amygdala_787A_all_seq/outs/filtered_feature_bc_matrix/matrix.mtx.gz
-  Rat_Opioid_HS_1_premrna:
-    counts: data/snRNA/Rat_Opioid_HS_1_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
-  Rat_Opioid_HS_2_premrna:
-    counts: data/snRNA/Rat_Opioid_HS_2_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
-  Rat_Opioid_HS_3_premrna:
-    counts: data/snRNA/Rat_Opioid_HS_3_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
-  Rat_Opioid_HS_4_premrna:
-    counts: data/snRNA/Rat_Opioid_HS_4_premrna/outs/filtered_feature_bc_matrix/matrix.mtx.gz
-
+# path to directory to save output files
+out: out
