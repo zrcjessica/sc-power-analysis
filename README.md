@@ -2,7 +2,7 @@
 A snakemake pipeline for scRNA-seq power analyses. 
 
 # Introduction
-This pipeline estimates power to detect differentially expressed genes from scRNA-seq data at various numbers of samples/cells and effect sizes. It models mean and dispersion parameters on a Negative Binomial distribution from reference data and simulates representative UMI count data from these estimates. The user can [define various simulation parameters](out: out), such as the number of differentially expressed genes, effect sizes, number of samples, and number of cells. 
+This pipeline estimates power to detect differentially expressed genes from scRNA-seq data at various numbers of samples/cells and effect sizes. It models mean and dispersion parameters on a Negative Binomial distribution from reference data and simulates representative UMI count data from these estimates. The user can [define various simulation parameters](https://github.com/zrcjessica/sc-power-analysis/blob/master/README.md#inputs), such as the number of differentially expressed genes, effect sizes, number of samples, and number of cells. 
 
 ![workflow](workflow.png)
 
