@@ -27,7 +27,7 @@ This pipeline was written with snakemake version 5.20.1. We recommend that you f
 
 All input parameters are defined in the `config.yml` file and must be edited accordingly to suit your own data. 
 
-### `data`
+### [`data`](https://github.com/zrcjessica/sc-power-analysis/blob/a953e6c459756d63568e5cb07917c53db25c0fba/config.yml#L2)
 The `data` variable in the `config.yml` file contains the names of all samples for which you have count data available. Each sample name also stores the paths to the count matrix files under `counts` variable. 
 
 This pipeline is designed to take UMI count matrices in compressed Matrix Market format (`*.mtx.gz`). We suggest using the `matrix.mtx.gz` file associated with the [filtered feature-barcode matrix](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/output/matrices) from [Cell Ranger](https://support.10xgenomics.com/single-cell-gene-expression/software/pipelines/latest/using/count).
